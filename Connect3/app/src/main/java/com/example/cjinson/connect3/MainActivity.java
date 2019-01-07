@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.support.v7.widget.GridLayout;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 counter.setImageResource(R.drawable.red);
             }
 
-            counter.animate().translationYBy(1500).rotation(1800).setDuration(1000);
+            counter.animate().translationYBy(1500).rotation(1800).setDuration(300);
 
             for (int[] winningPos : winningPos) {
 
@@ -49,11 +48,11 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         winner = "Red";
                     }
-                    Toast.makeText(this, winner + " has won!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, winner + " has won!", Toast.LENGTH_LONG).show();
                     Button button = (Button) findViewById(R.id.resetBtn);
                     button.setVisibility(View.VISIBLE);
 
-                    Toast.makeText(this, winner + " has won!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, winner + " has won!", Toast.LENGTH_LONG).show();
 
 
                 }
@@ -91,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
         }
         gameActive=true;
         player=0;
+        score=0;
 
     }
         @Override
