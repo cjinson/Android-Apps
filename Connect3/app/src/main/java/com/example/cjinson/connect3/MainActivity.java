@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 counter.setImageResource(R.drawable.red);
             }
 
-            counter.animate().translationYBy(1500).rotation(1800).setDuration(300);
+            counter.animate().translationYBy(1500).rotation(1800).setDuration(150);
 
             for (int[] winningPos : winningPos) {
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 if (gameState[tappedPos] != 2) {
                     score++;
                 }
-                if (score == 9) {
+                else if (score == 9&& gameActive==true) {
                     Toast.makeText(this, "The match is a draw!", Toast.LENGTH_SHORT).show();
                     Button button = (Button) findViewById(R.id.resetBtn);
                     button.setVisibility(View.VISIBLE);
